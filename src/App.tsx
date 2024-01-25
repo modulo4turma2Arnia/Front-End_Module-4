@@ -1,9 +1,9 @@
+import { Router } from "./config/router"
+
 function App() {
   return (
     <>
-      <div>
-        <h1>Hello Word</h1>
-      </div>
+      <Router />
     </>
   )
 }
