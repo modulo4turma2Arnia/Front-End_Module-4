@@ -50,7 +50,7 @@ export const Button = styled.button`
   border-radius: 1rem;
   border: none;
   outline: none;
-  font-family: Sora;
+  font-family: "Sora", sans-serif;
   font-style: normal;
   font-size: 1.2rem;
   font-weight: 700;
@@ -62,13 +62,14 @@ export const Button = styled.button`
 export const FormContainer = styled.div`
   transform: translateX(100%);
   position: relative;
-  right: 560px;
+  right: 590px;
   height: 28rem;
   width: 33rem;
-  padding-left: 10rem;
+  padding-left: 9.4rem;
   padding-top: 15rem;
   background-color: white;
-  border-radius: 10%;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
   &.show {
     transform: translateX(0);
   }
@@ -78,13 +79,13 @@ export const Form = styled.form``;
 
 export const Paragraph = styled.p`
   color: var(--primary--color);
-  font-family: Sora;
+  font-family: "Sora", sans-serif;
   font-size: 18px;
 `;
 
 export const Heading2 = styled.h2`
   color: var(--primary--color);
-  font-family: "Sora";
+  font-family: "Sora", sans-serif;
   font-size: 32px;
   width: 20rem;
   margin-bottom: 1.5rem;
@@ -97,25 +98,42 @@ export const Fieldset = styled.fieldset`
 export const Legend = styled.legend`
   text-decoration: none;
   position: relative;
-  top: 22px;
-  left: 5px;
+  top: 1.8rem;
+  left: 1rem;
   color: gray;
   font-size: 14px;
+  font-family: "Sora", sans-serif;
 `;
 export const Input = styled.input`
-  width: 18rem;
-  height: 1.5rem;
-  border-radius: 10px;
+  width: 20.8rem;
+  height: 2.2rem;
+  border-radius: 1rem;
   padding: 1rem;
+  padding-top: 1.2rem;
   outline: none;
   border: var(--primary--color) 1px solid;
+  font-size: 18px;
 `;
 export const InputWrapper = styled.div``;
 export const IconWrapper = styled.div`
   position: relative;
-  left: 18rem;
-  bottom: 2.4rem;
+  left: 20.2rem;
+  bottom: 3rem;
   color: var(--primary--color);
+  cursor: pointer;
 `;
 
-export const ButtonWrapper = styled.button``;
+export const ButtonWrapper = styled.button`
+  background-color: var(--primary--color);
+  width: 23rem;
+  height: 4rem;
+  border-radius: 10px;
+  padding-top: 0%.5;
+  font-size: 18px;
+  outline: none;
+  color: white;
+  border: var(--primary--color) 1px solid;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+`;

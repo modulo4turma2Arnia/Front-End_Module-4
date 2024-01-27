@@ -21,7 +21,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--background--color);
-    font-family: 'Sora';
+    font-family: 'Sora', sans-serif;
 }
 `;
 
