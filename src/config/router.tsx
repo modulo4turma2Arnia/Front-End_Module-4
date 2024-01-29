@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import { Opening } from "../pages//opening/opening"
-import { Login } from "../pages/login/login"
+import { Home } from "../pages/home/home"
 
 const router = createBrowserRouter([
     {
@@ -9,8 +9,8 @@ const router = createBrowserRouter([
         element: <Opening />
     },
     {
-        path: '/login',
-        element: <Login />
+        path: '/home',
+        element: <Home />
     },
     {
 

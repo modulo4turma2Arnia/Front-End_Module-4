@@ -7,6 +7,7 @@ import { useLogin } from "../../hook/useLogin";
 import { handleSubmit } from "../../services/handles/handleSubmit/handleSubmit";
 
 export const Opening: React.FC = () => {
+
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [showLoginBtn, setShowLoginBtn] = useState(true);
@@ -24,57 +25,59 @@ export const Opening: React.FC = () => {
 
   const formRef = useRef<HTMLFormElement | null>(null);
 
-  // const handleOutsideClick = (event: React.MouseEvent<HTMLDivElement>) => {
-  //   if (formRef.current && !formRef.current.contains(event.target as Node)) {
-  //     setShowForm(false);
-  //   }
-  // };
+  const handleOutsideClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (formRef.current && !formRef.current.contains(event.target as Node)) {
+      setShowForm(false);
+      setShowLoginBtn(true)
+    }
+  };
+
   const handleSuccess = () => {
     navigate("/login");
   };
+
   return (
-    <C.Container
-    // onClick={handleOutsideClick}
-    >
-      <C.Background />
+    <C.Container onClick={handleOutsideClick}>
+      {/* <C.Background /> */}
       <C.Box>
-        <C.FieldImg>
-          <C.Logo src={description} />
-          <C.FieldButton onClick={handleLoggedIn}>
-            {showLoginBtn && <C.Button>Fazer login</C.Button>}
-          </C.FieldButton>
-        </C.FieldImg>
-        {showForm && (
-          <C.FormContainer>
-            <C.Form ref={formRef} onSubmit={handleSubmit(login, handleSuccess)}>
-              <C.Paragraph>Seja bem vindo!</C.Paragraph>
-              <C.Heading2>Faça seu login</C.Heading2>
-              <C.Fieldset>
-                <C.Legend>E-mail</C.Legend>
-                <C.Input type="email" name="email" required />
-              </C.Fieldset>
-              <C.Fieldset>
-                <C.Legend>Senha</C.Legend>
-                <C.InputWrapper>
-                  <C.Input
-                    type={passwordVisible ? "text" : "password"}
-                    name="password"
-                    required
-                  />
-                  <C.IconWrapper onClick={handleIconClick}>
-                    {passwordVisible ? (
-                      <AiOutlineEye size={25} />
-                    ) : (
-                      <AiOutlineEyeInvisible size={25} />
-                    )}
-                  </C.IconWrapper>
-                </C.InputWrapper>
-              </C.Fieldset>
-              <C.ButtonWrapper type="submit">Entrar</C.ButtonWrapper>
-            </C.Form>
-          </C.FormContainer>
-        )}
-      </C.Box>
+          <C.FieldImg>
+            <C.Logo src={description} />
+            <C.FieldButton onClick={handleLoggedIn}>
+              {showLoginBtn && <C.Button>Fazer login</C.Button>}
+            </C.FieldButton>
+          </C.FieldImg>
+        
+          {showForm && (
+            <C.FormContainer>
+              <C.Form ref={formRef} onSubmit={handleSubmit(login, handleSuccess)}>
+                <C.Paragraph>Seja bem vindo!</C.Paragraph>
+                <C.Heading2>Faça seu login</C.Heading2>
+                {/* <C.Fieldset> */}
+                  <C.Legend>E-mail</C.Legend>
+                  <C.Input type="email" name="email" required />
+                {/* </C.Fieldset> */}
+                {/* <C.Fieldset> */}
+                  <C.Legend>Senha</C.Legend>
+                  <C.InputWrapper>
+                    <C.Input
+                      type={passwordVisible ? "text" : "password"}
+                      name="password"
+                      required
+                    />
+                    <C.IconWrapper onClick={handleIconClick}>
+                      {passwordVisible ? (
+                        <AiOutlineEye size={25} />
+                      ) : (
+                        <AiOutlineEyeInvisible size={25} />
+                      )}
+                    </C.IconWrapper>
+                  </C.InputWrapper>
+                {/* </C.Fieldset> */}
+                <C.ButtonWrapper type="submit">Entrar</C.ButtonWrapper>
+              </C.Form>
+            </C.FormContainer>
+          )}
+        </C.Box>
     </C.Container>
   );
 };

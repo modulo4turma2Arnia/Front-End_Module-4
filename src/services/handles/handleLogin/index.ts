@@ -22,4 +22,5 @@ export const Login = async (email: string, senha: string): Promise<LoginProps> =
         }
     }
     return { login: false, message: 'Erro' }
+    
 }
