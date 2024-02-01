@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export default createGlobalStyle`
 :root{ 
     --primary--color: #502B6B;
     --primary--color-10: #734F8C;
@@ -14,10 +14,10 @@ const GlobalStyle = createGlobalStyle`
     --success-color: #00C247;
     --warning-color: #FFE16A;
     --danger--color: #FF3333;
+    --black--color: #000000;
 } 
 
 body{
-    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
     margin: 0;
     padding: 0;
     background-color: var(--background--color);
@@ -25,4 +25,4 @@ body{
 }
 `;
 
-export default GlobalStyle;
+

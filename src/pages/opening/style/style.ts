@@ -13,12 +13,19 @@ export const Container = styled.div`
 `;
 
 export const Background = styled.div`
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(80, 43, 107, 0.4); 
 `;
 
 export const Box = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 991;
 `;
 
 export const Logo = styled.img`
@@ -26,6 +33,7 @@ export const Logo = styled.img`
   min-width: 22rem;
   margin-bottom: 1.6rem;
   max-width: 31rem;
+  z-index: 991;
 `;
 export const FieldImg = styled.div`
   display: flex;
@@ -35,6 +43,7 @@ export const FieldImg = styled.div`
 export const FieldButton = styled.div`
   display: flex;
   justify-content: center;
+  z-index: 991;
 `;
 export const Button = styled.button`
   width: 72%;
@@ -46,8 +55,7 @@ export const Button = styled.button`
   border: none;
   outline: none;
   font-family: "Sora", sans-serif;
-  font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #502b6b;
   letter-spacing: 0.3px;
@@ -55,6 +63,7 @@ export const Button = styled.button`
 `;
 
 export const FormContainer = styled.div`
+  z-index: 991;
   width: 100%;
   background-color: white;
   border-radius: 3.75rem 0 0 3.75rem;
@@ -62,6 +71,7 @@ export const FormContainer = styled.div`
   &.show {
     transform: translateX(0);
   }
+  
 `;
 
 export const Form = styled.form`
@@ -74,19 +84,20 @@ export const Form = styled.form`
 
 export const Paragraph = styled.p`
   color: var(--primary--color);
-  font-family: "Sora", sans-serif;
+  font-family: 'Sora', sans-serif;
   font-size: 1.2rem;
 `;
 
 export const Heading2 = styled.h2`
   color: var(--primary--color);
-  font-family: "Sora", sans-serif;
+  font-family: 'Sora', sans-serif;
   font-size: 32px;
   margin-bottom: 0.8rem;
   font-weight: 800;
 `;
 
 export const Legend = styled.legend`
+  font-family: 'Sora', sans-serif;
   text-decoration: none;
   position: relative;
   top: 1.8rem;
@@ -122,11 +133,11 @@ export const ButtonWrapper = styled.button`
   width: 83%;
   border-radius: 10px;
   padding: 1.2rem;
+  font-family: "Sora", sans-serif;
   font-size: 18px;
   outline: none;
   color: white;
   border: var(--primary--color) 1px solid;
-  font-family: "Sora", sans-serif;
   font-weight: 700;
   cursor: pointer;
 `;
