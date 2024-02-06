@@ -15,7 +15,7 @@ export const Home: React.FC = () => {
     return (
         <>  
             <C.ContainerHome>
-                <Header />
+                <Header textColor="white"/>
                 <C.BoxHome>
                     <Gamification />      
                 </C.BoxHome>

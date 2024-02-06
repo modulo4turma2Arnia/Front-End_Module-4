@@ -102,7 +102,7 @@ export const Legend = styled.legend`
   position: relative;
   top: 1.8rem;
   left: 1rem;
-  bottom: 1rem
+  bottom: 1rem;
   color: gray;
   font-size: 14px;
   font-family: "Sora", sans-serif;
