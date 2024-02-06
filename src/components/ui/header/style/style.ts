@@ -27,10 +27,10 @@ export const FieldSpan = styled.div`
 
 `
 export const Greetings = styled.span`
-    color: white;
+    color: ${textColor => textColor.color};
 `
 export const Name = styled.span`
-    color: white;
+    color: ${textColor => textColor.color};
     font-weight: 600;
 `
 export const FieldMenu = styled.div`
@@ -42,10 +42,13 @@ export const FieldMenu = styled.div`
 `
 export const Home = styled.span`
     cursor: pointer;
+    color: ${textColor => textColor.color};
 `
 export const Products = styled.span`
     cursor: pointer;
+    color: ${color => color.color};
 `
 export const Perfil = styled.span`
     cursor: pointer;
+    color: ${color => color.color};
 `
