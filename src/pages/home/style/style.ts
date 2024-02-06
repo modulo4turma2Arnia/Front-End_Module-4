@@ -66,3 +66,19 @@ export const FieldImageHero = styled.div`
     margin-top: 3.8rem;
     border-radius: 1rem;
 `
+export const ContainerCards = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+`
+export const FieldTitle = styled.div`
+    width: 100%;
+    display:flex;
+    padding-top: 2rem;
+`
+export const HeadingThree = styled.h3`
+    margin-left: 8.7%;
+    margin-bottom: 1.4%;
+`

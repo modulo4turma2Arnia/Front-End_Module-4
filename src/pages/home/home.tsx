@@ -5,6 +5,7 @@ import { IconWithMargin } from './style/style'
 import React, { useRef } from 'react'
 import { useOutsideClick } from '../../hooks/useOutsideClick'
 import { ImageHero } from '../../components/ui/imageHeros/ImageHeros'
+import { Cards } from '../../components/ui/card/Card'
 
 export const Home: React.FC = () => {
     const[clicked, setClicked] = React.useState(false)
@@ -36,6 +37,19 @@ export const Home: React.FC = () => {
                         <ImageHero />
                 </C.FieldImageHero>
             </C.ContainerHero>
+            <C.FieldTitle>
+                <C.HeadingThree>Produtos para você</C.HeadingThree>
+            </C.FieldTitle>
+            <C.ContainerCards>
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+            </C.ContainerCards>
         </>
     )
 }
