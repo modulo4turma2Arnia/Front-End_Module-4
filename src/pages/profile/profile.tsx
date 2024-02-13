@@ -22,7 +22,7 @@ export const Profile: React.FC = () => {
         <ProfileMenu title="Minhas Jóias" icon={<IoDiamondOutline size={33}/>} />
         <C.Bar></C.Bar>
         <Link to="/">
-         <ProfileMenu title="Sair" icon={<IoExitOutline size={33}/>} />
+          <ProfileMenu title="Sair" icon={<IoExitOutline size={33}/>} />
         </Link>
       </C.Menu>
       

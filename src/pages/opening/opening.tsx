@@ -33,7 +33,7 @@ export const Opening: React.FC = () => {
   };
 
   const handleSuccess = () => {
-    navigate("/login");
+    navigate("/home");
   };
 
   return (

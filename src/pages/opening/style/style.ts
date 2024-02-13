@@ -119,7 +119,7 @@ export const InputWrapper = styled.div`
 `;
 export const IconWrapper = styled.div`
   position: relative;
-  left: 18.2rem;
+  left: 17rem;
   bottom: 2.6rem;
   color: var(--primary--color);
   cursor: pointer;
