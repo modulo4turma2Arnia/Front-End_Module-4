@@ -66,7 +66,7 @@ export const FormContainer = styled.div`
   z-index: 991;
   width: 100%;
   background-color: white;
-  border-radius: 3.75rem 0 0 3.75rem;
+  border-radius: 40px;
   transform: translateX(29%);
   &.show {
     transform: translateX(0);

@@ -6,6 +6,7 @@ import React, { useRef } from "react";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { ImageHero } from "../../components/ui/imageHeros/ImageHeros";
 import { Cards } from "../../components/ui/card/Card";
+import { Link } from "react-router-dom";
 
 export const Home: React.FC = () => {
   const [clicked, setClicked] = React.useState(false);
@@ -46,7 +47,9 @@ export const Home: React.FC = () => {
         <C.HeadingThree>Produtos para você</C.HeadingThree>
       </C.FieldTitle>
       <C.ContainerCards>
+        <Link to="/product">
         <Cards isActive={true} />
+        </Link>
         <Cards isActive={true} />
         <Cards isActive={true} />
         <Cards isActive={true} />

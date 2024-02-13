@@ -61,7 +61,7 @@ export const ContainerHero = styled.div`
 export const FieldImageHero = styled.div`
     background-image: url("./src/assets/images/Background.png");
     background-repeat: no-repeat;
-    width: 82%;
+    width: 84%;
     overflow: hidden;
     margin-top: 3.8rem;
     border-radius: 1rem;
@@ -70,7 +70,7 @@ export const ContainerCards = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-bottom: 4rem;
 `
 export const FieldTitle = styled.div`
@@ -81,4 +81,5 @@ export const FieldTitle = styled.div`
 export const HeadingThree = styled.h3`
     margin-left: 8.7%;
     margin-bottom: 1.4%;
+    font-size: 24px;
 `

@@ -11,7 +11,7 @@ export const FieldGame = styled.div`
 export const Points = styled.h1`
     font-family: Guardians;
     color: var(--primary--color-30);
-    font-size: 3.5rem;
+    font-size: 5.5rem;
     margin-bottom: -1rem;
 `
 export const Balance = styled.h3`
