@@ -4,11 +4,12 @@ import * as C from "./style/style";
 type ProfileMenuProps = {
   title: string;
   icon: IconBaseProps;
+  actionOpen?: () => void;
 };
 
-export const ProfileMenu: React.FC = ({ title, icon }: ProfileMenuProps) => {
+export const ProfileMenu = ({ title, icon , action}: ProfileMenuProps) => {
   return (
-    <C.Container>
+    <C.Container onClick={action}>
       <C.MenuLine>
         <C.IconSquare>
           <C.Icon>

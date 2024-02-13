@@ -36,6 +36,7 @@ export const FieldJewels = styled.div`
 `
 export const JewelsImg = styled.img`
     margin: -0.75rem;
+    width: 4rem;
 `
 export const Inline = styled.div`
     display: flex;
