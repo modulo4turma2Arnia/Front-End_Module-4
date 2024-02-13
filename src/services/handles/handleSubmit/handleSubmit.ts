@@ -6,10 +6,10 @@ export const handleSubmit = (
     return async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const email = event.currentTarget.elements.namedItem('email') as HTMLInputElement
-        const senha = event.currentTarget.elements.namedItem('password') as HTMLInputElement
+        const password = event.currentTarget.elements.namedItem('password') as HTMLInputElement
 
-        if(email && senha) {
-            const response = await login(email.value, senha.value)
+        if(email && password) {
+            const response = await login(email.value, password.value)
             const success = response.login
             if(success){
                 onSuccess()

@@ -59,7 +59,7 @@ export const Profile = () => {
         {isActiveJewerly && <JewerlyCard />}
         <C.Bar></C.Bar>
         <Link to="/">
-          <ProfileMenu title="Sair" icon={<IoExitOutline size={33} />} />
+        <ProfileMenu title="Sair" icon={<IoExitOutline size={33}/>} />
         </Link>
       </C.Menu>
     </>

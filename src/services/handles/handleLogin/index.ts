@@ -2,9 +2,9 @@ import axios from 'axios'
 import { LoginProps } from '../../../types/loginProps/Login'
 import { CulturePowerPath } from '../../url'
 
-export const Login = async (email: string, senha: string): Promise<LoginProps> => {
+export const Login = async (email: string, password: string): Promise<LoginProps> => {
     try {
-        const result = await CulturePowerPath.post('login', {email, senha}) // simulação de chamada de api
+        const result = await CulturePowerPath.post('auth', {email, password}) 
         if(result.status === 200) {
             return { login: true, token: result.data.token }
         }
