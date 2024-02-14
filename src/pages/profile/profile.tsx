@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import * as C from "./style/style";
 import { Header } from "../../components/ui/header/Header";
 import { ProfileMenu } from "../../components/ui/profileMenu/profileMenu";
@@ -10,27 +10,28 @@ import { DataCard } from "../../components/ui/profileCard/dataCard/dataCard";
 import { RescCard } from "../../components/ui/profileCard/rescCard/rescCard";
 import { JewerlyCard } from "../../components/ui/profileCard/jewerlyCard/jewerlyCard";
 
+
 export const Profile = () => {
-  const [isActiveData, setIsActiveData] = useState(true);
-  const [isActiveResc, setIsActiveResc] = useState(false);
-  const [isActiveJewerly, setIsActiveJewerly] = useState(false);
+  const [isActiveData, setIsActiveData] = React.useState(true);
+  const [isActiveResc, setIsActiveResc] = React.useState(false);
+  const [isActiveJewerly, setIsActiveJewerly] = React.useState(false);
 
   const showMenuContentData = () => {
-    setIsActiveJewerly(false);
-    setIsActiveResc(false);
-    setIsActiveData(true);
-  };
+    setIsActiveJewerly(false)
+    setIsActiveResc(false)
+    setIsActiveData(true)
+  }
 
   const showMenuContentResc = () => {
-    setIsActiveData(false);
-    setIsActiveJewerly(false);
-    setIsActiveResc(true);
-  };
+    setIsActiveData(false)
+    setIsActiveJewerly(false)
+    setIsActiveResc(true)
+  }
 
   const showMenuContentJewerly = () => {
-    setIsActiveData(false);
-    setIsActiveResc(false);
-    setIsActiveJewerly(true);
+    setIsActiveData(false)
+    setIsActiveResc(false)
+    setIsActiveJewerly(true)
   };
 
   return (
@@ -38,30 +39,30 @@ export const Profile = () => {
       <Header textColor="#502B6B" />
       <C.Menu>
         <ProfileMenu
-          action={() => showMenuContentData()}
+          actionOpen={() => showMenuContentData()}
           title="Meus dados"
           icon={<GoPerson size={33} />}
         />
         {isActiveData && <DataCard />}
         <C.Bar></C.Bar>
         <ProfileMenu
-          action={() => showMenuContentResc()}
+          actionOpen={() => showMenuContentResc()}
           title="Meus resgates"
           icon={<LuTicket size={33} />}
         />
         {isActiveResc && <RescCard />}
         <C.Bar></C.Bar>
         <ProfileMenu
-          action={() => showMenuContentJewerly()}
+          actionOpen={() => showMenuContentJewerly()}
           title="Minhas jóias"
           icon={<IoDiamondOutline size={33} />}
         />
         {isActiveJewerly && <JewerlyCard />}
         <C.Bar></C.Bar>
         <Link to="/">
-        <ProfileMenu title="Sair" icon={<IoExitOutline size={33}/>} />
+          <ProfileMenu title="Sair" icon={<IoExitOutline size={33}/>} />
         </Link>
       </C.Menu>
     </>
-  );
-};
+  )
+}

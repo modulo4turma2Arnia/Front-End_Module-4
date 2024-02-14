@@ -9,6 +9,8 @@ import { ImageHero } from '../../components/ui/imageHeros/ImageHeros'
 import { Cards } from '../../components/ui/card/Card'
 import { CardProps } from '../../types/cardProps/CardProps'
 import { GetDataCards } from '../../requests/products'
+import { Spinner } from '../../components/ui/spinner/Spinner';
+import { ErrorComponent } from '../../components/ui/error/ErrorComponent';
 
 export const Home: React.FC = () => {
     const [products, setProducts] = React.useState<Array<CardProps>>([])
@@ -24,20 +26,28 @@ export const Home: React.FC = () => {
             try {
                 const data = await GetDataCards()
                 console.log("Dados da API:", data)
-                setProducts(data)
+                if(Array.isArray(data)){
+                    setProducts(data)
+                } else {
+                    setProducts([data])
+                }
+                
             } catch (err) {
                 if(err instanceof Error){
+                    console.log(err.message)
                 setError(err.message)
             }
             } finally {
-                setLoading(false)
+                setTimeout(() => {
+                    setLoading(false)
+                }, 2000)
             }
         }
         fetchProducts()
     }, [])
     
-    if(loading) return <div>Carregando...</div>
-    if(error) return <div>Erro ao carregar produtos: {error}</div>
+    if(loading) return <Spinner />
+    if(error) return <ErrorComponent/>
 
     return (
         <>  
@@ -68,7 +78,7 @@ export const Home: React.FC = () => {
             </C.FieldTitle>
             <C.ContainerCards>
                 {products.map((product) => (
-                <Link to="/product">
+                <Link to="/product" className='noUnderline'>
                     <Cards
                         key={product.id} 
                         product={product}

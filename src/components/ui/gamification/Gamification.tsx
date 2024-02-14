@@ -7,6 +7,11 @@ import { CiCalendar } from 'react-icons/ci'
 
 
 export const Gamification: React.FC = () => {
+    const dataAtual = new Date()
+    const dia = dataAtual.getDate()
+    const mes = dataAtual.getMonth() + 1 
+    const ano = dataAtual.getFullYear()
+
     return (
         <C.FieldGame>
             <C.Balance>Meu Saldo</C.Balance>
@@ -20,7 +25,7 @@ export const Gamification: React.FC = () => {
             </C.FieldJewels>
             <C.Inline>
                 <C.Calendar><CiCalendar size={24}/> <C.Cycle>2° Ciclo de Gestão de Desempenho</C.Cycle></C.Calendar>
-                <C.ParagraphTwo>Vence em: 10 de maio de 2024</C.ParagraphTwo>
+                <C.ParagraphTwo>Vence em: &nbsp;{` ${dia} de ${mes} de ${ano}`}</C.ParagraphTwo>
             </C.Inline>
         </C.FieldGame>
     )

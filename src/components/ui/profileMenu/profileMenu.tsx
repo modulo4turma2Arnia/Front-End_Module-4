@@ -7,9 +7,9 @@ type ProfileMenuProps = {
   actionOpen?: () => void;
 };
 
-export const ProfileMenu = ({ title, icon , action}: ProfileMenuProps) => {
+export const ProfileMenu = ({ title, icon , actionOpen}: ProfileMenuProps) => {
   return (
-    <C.Container onClick={action}>
+    <C.Container onClick={actionOpen}>
       <C.MenuLine>
         <C.IconSquare>
           <C.Icon>
@@ -20,4 +20,4 @@ export const ProfileMenu = ({ title, icon , action}: ProfileMenuProps) => {
       </C.MenuLine>
     </C.Container>
   );
-};
+}

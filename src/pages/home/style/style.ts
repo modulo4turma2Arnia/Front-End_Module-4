@@ -32,9 +32,8 @@ export const FieldSearch = styled.div`
 export const SearchBox = styled.div<SearchBoxProps>`
     margin-top: -1.5rem;
     width: 50%;
-    border: 1px solid gray;
     border-radius: 0.7rem;
-    border: ${props => props.clicked ? '1px solid gray' : 'none'};
+    border: ${props => props.clicked ? '2px solid #4F1659' : 'none'};
     display: flex;
     padding: 0.1rem;
     background-color: var(--background--color);
@@ -72,6 +71,10 @@ export const ContainerCards = styled.div`
     justify-content: center;
     gap: 1.5rem;
     margin-bottom: 4rem;
+
+    & .noUnderline {
+        text-decoration: none;
+    }
 `
 export const FieldTitle = styled.div`
     width: 100%;

@@ -15,6 +15,7 @@ export default createGlobalStyle`
     --warning-color: #FFE16A;
     --danger--color: #FF3333;
     --black--color: #000000;
+    --custom
     --custom--gray--color: #9E9E9E;
 } 
 

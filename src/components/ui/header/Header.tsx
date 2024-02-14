@@ -1,12 +1,29 @@
+import React from "react";
 import * as C from "./style/style";
 import { Link } from "react-router-dom";
 import avatar from "../../../assets/images/avatar.jpg";
+import { HeaderProps } from "../../../types/headerProps/HeaderProps";
+import { GetDataUser } from "../../../requests/register";
 
-type HeaderProps = {
-  textColor: string;
-};
+export const Header: React.FC<HeaderProps> = ({ textColor }) => {
+  const [userName, setUserName] = React.useState('')
 
-export const Header: React.FC = ({ textColor }: HeaderProps) => {
+  React.useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        await GetDataUser()
+      const firstName = localStorage.getItem('userFirstName');
+      if(firstName){
+        setUserName(firstName)
+      }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchUser()
+  }, [])
+  
+
   return (
     <C.Header>
       <C.FieldHeader>
@@ -16,7 +33,7 @@ export const Header: React.FC = ({ textColor }: HeaderProps) => {
           </C.ImgCircle>
           <C.FieldSpan>
             <C.Greetings color={textColor}>Olá, </C.Greetings>
-            <C.Name color={textColor}>Avatar name</C.Name>
+            <C.Name color={textColor}>{userName}</C.Name>
           </C.FieldSpan>
         </C.FieldImage>
       </C.FieldHeader>
@@ -30,5 +47,5 @@ export const Header: React.FC = ({ textColor }: HeaderProps) => {
         </Link>
       </C.FieldMenu>
     </C.Header>
-  );
-};
+  )
+}
