@@ -16,6 +16,8 @@ export const Home: React.FC = () => {
     const [products, setProducts] = React.useState<Array<CardProps>>([])
     const [loading, setLoading] = React.useState(true)
     const [error, setError] = React.useState<string | null>(null)
+    const [searchTerm, setSearchTerm] = React.useState('')
+    const [price, _] = React.useState('')
     const ref = useRef<HTMLDivElement>(null)
     const[clicked, setClicked] = React.useState(false)
 
@@ -24,14 +26,11 @@ export const Home: React.FC = () => {
     React.useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const data = await GetDataCards()
-                console.log("Dados da API:", data)
-                if(Array.isArray(data)){
-                    setProducts(data)
-                } else {
-                    setProducts([data])
-                }
-                
+                const isPrice = !isNaN(Number(searchTerm))
+                const name = isPrice ? '' : searchTerm
+                const price = isPrice ? (searchTerm) : '' 
+                const data = await GetDataCards(name, price)
+                setProducts(data)  
             } catch (err) {
                 if(err instanceof Error){
                     console.log(err.message)
@@ -44,7 +43,7 @@ export const Home: React.FC = () => {
             }
         }
         fetchProducts()
-    }, [])
+    }, [searchTerm, price])
     
     if(loading) return <Spinner />
     if(error) return <ErrorComponent/>
@@ -65,7 +64,11 @@ export const Home: React.FC = () => {
                         setClicked(true)}}
                     >
                     <IconWithMargin size={30}/>
-                    <C.Search placeholder='O que você esta buscando? '/>   
+                    <C.Search placeholder='O que você esta buscando? '
+                        type='text'
+                        value={searchTerm}
+                        onChange={(event) => setSearchTerm(event.target.value)}
+                    />   
                 </C.SearchBox>
             </C.FieldSearch>
             <C.ContainerHero>

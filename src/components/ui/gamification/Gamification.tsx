@@ -4,13 +4,13 @@ import yellow from '../../../assets/images/yellow.png'
 import lilac from '../../../assets/images/lilac.png'
 import green from '../../../assets/images/green.png'
 import { CiCalendar } from 'react-icons/ci'
-
+import { Month } from '../../../utils'
 
 export const Gamification: React.FC = () => {
-    const dataAtual = new Date()
-    const dia = dataAtual.getDate()
-    const mes = dataAtual.getMonth() + 1 
-    const ano = dataAtual.getFullYear()
+    const currentData = new Date()
+    const day = currentData.getDate()
+    const month = currentData.getMonth()
+    const year = currentData.getFullYear()
 
     return (
         <C.FieldGame>
@@ -25,7 +25,7 @@ export const Gamification: React.FC = () => {
             </C.FieldJewels>
             <C.Inline>
                 <C.Calendar><CiCalendar size={24}/> <C.Cycle>2° Ciclo de Gestão de Desempenho</C.Cycle></C.Calendar>
-                <C.ParagraphTwo>Vence em: &nbsp;{` ${dia} de ${mes} de ${ano}`}</C.ParagraphTwo>
+                <C.ParagraphTwo>Vence em: &nbsp;{` ${day} de ${Month[month]} de ${year}`}</C.ParagraphTwo>
             </C.Inline>
         </C.FieldGame>
     )

@@ -6,7 +6,8 @@ export const BoxCards = styled.div`
     gap: 1rem;
 `
 export const FieldImgCard = styled.div`
-
+`
+export const NotFound = styled.div`
 `
 export const Imgcard = styled.img`
     width: 16.6rem;

@@ -8,9 +8,9 @@ export const GetDataUser = async () : Promise<UserProps> =>{
         const headers = {
             Authorization: `Bearer ${token}`
         }
-        const result = await CulturePowerPath.post('auth/register', { headers })
+        const result = await CulturePowerPath.get('users/infouser', { headers })
         console.log('Resultado da API:', result)
-        if(result.status === 201){
+        if(result.status === 200){
             console.log('Dados do usuário:', result.data)
             localStorage.setItem('userFirstName', result.data.FirstName)
             return result.data

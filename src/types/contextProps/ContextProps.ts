@@ -1,4 +1,6 @@
+import { CardProps } from "../cardProps/CardProps"
+
 export type ContextProps = {
-    selectProduct: null
-    setSelectProduct: React.Dispatch<React.SetStateAction<null>>
+    selectProduct: CardProps | null
+    setSelectProduct: React.Dispatch<React.SetStateAction<CardProps | null>>
 }

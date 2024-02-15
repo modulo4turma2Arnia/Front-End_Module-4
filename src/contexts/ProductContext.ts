@@ -1,4 +1,9 @@
 import React from "react";
 import { ContextProps } from "../types/contextProps/ContextProps";
 
-export const ProductContext = React.createContext<ContextProps | null>(null)
+const defaultContext: ContextProps = {
+    selectProduct: null,
+    setSelectProduct: () => {},
+}
+
+export const ProductContext = React.createContext<ContextProps>(defaultContext)

@@ -75,5 +75,5 @@ export const Opening: React.FC = () => {
           )}
         </C.Box>
     </C.Container>
-  );
-};
+  )
+}
