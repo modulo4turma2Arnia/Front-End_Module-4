@@ -81,7 +81,7 @@ export const Home: React.FC = () => {
             </C.FieldTitle>
             <C.ContainerCards>
                 {products.map((product) => (
-                <Link to="/product" className='noUnderline'>
+                <Link to={`/product/${product.id}`} className='noUnderline'>
                     <Cards
                         key={product.id} 
                         product={product}

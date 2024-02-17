@@ -1,19 +1,20 @@
 import * as C from "./style/style";
 import { IoDiamondOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CardProps } from "../../../types/cardProps/CardProps";
 import React from "react";
-import { GetDataCards } from "../../../requests/products";
+import { GetProduct } from "../../../requests/product_id";
 
 
 export const ProductCard: React.FC = () => {
+  const { id } = useParams<{ id: string }>()
   const [product, setProduct] = React.useState<CardProps | null>(null)
   
   React.useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const cardsData = await GetDataCards()
-        setProduct(cardsData[0])
+        const cardData = await GetProduct(Number(id))
+        setProduct(cardData)
       } catch (err) {
         if(err instanceof Error){
           console.error(err.message)
@@ -21,7 +22,7 @@ export const ProductCard: React.FC = () => {
       }
     }
     fetchProductData()
-  }, [])
+  }, [id])
   
   let firstHalf = ""
   let secondHalf = ""
@@ -36,10 +37,10 @@ export const ProductCard: React.FC = () => {
     <C.Container>
       <div><C.Img src={product?.image}></C.Img></div>
       <C.Content>
-        <C.Title>Headphone W820BT Bluetooth over-ear edifier</C.Title>
+        <C.Title>{product?.name}</C.Title>
         <C.Details>
           <C.DetailName>Por:</C.DetailName>
-          <C.Count>2</C.Count>
+          <C.Count>{product?.price}</C.Count>
             <IoDiamondOutline />
         </C.Details>
         <C.Description>
