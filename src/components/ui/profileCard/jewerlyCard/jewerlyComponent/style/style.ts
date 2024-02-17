@@ -9,17 +9,13 @@ export const Container = styled.div`
 
 export const ImgField = styled.div`
   border: 0.1rem solid #eeeeee;
-  width: 2.8rem;
-  height: 3rem;
+  display:flex;
   padding: 0.1rem;
   border-radius: 10%;
 `;
 
 export const Img = styled.img`
   width: 4.7rem;
-  position: relative;
-  top: 0.2rem;
-  right: 0.8rem;
 `;
 
 export const Content = styled.div`
