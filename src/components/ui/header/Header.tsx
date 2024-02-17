@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as C from "./style/style";
 import { Link } from "react-router-dom";
 import avatar from "../../../assets/images/avatar.jpg"
@@ -8,13 +8,20 @@ import { GetDataUser } from "../../../requests/dataUsers";
 export const Header: React.FC<HeaderProps> = ({ textColor }) => {
   const [userName, setUserName] = React.useState('')
   const [userImage, setUserImage] = React.useState('')
+  const [lastName, setLastName] = useState('')
 
   React.useEffect(() => {
     const fetchUser = async () => {
       try {
         const user = await GetDataUser()
       setUserName(user.FirstName)
+      setLastName(user.LastName)
       setUserImage(user.profileImage)
+
+      //teste
+      if(user.credits != null ){
+        localStorage.setItem("CREDITS", user.credits)
+      }
       } catch (error) {
         console.log(error)
       }
@@ -31,7 +38,7 @@ export const Header: React.FC<HeaderProps> = ({ textColor }) => {
           </C.ImgCircle>
           <C.FieldSpan>
             <C.Greetings color={textColor}>Olá, </C.Greetings>
-            <C.Name color={textColor}>{userName}</C.Name>
+            <C.Name color={textColor}>{userName} {lastName}</C.Name>
           </C.FieldSpan>
         </C.FieldImage>
       </C.FieldHeader>

@@ -54,6 +54,9 @@ export const FieldMenu = styled.div`
     color: white;
     gap: 4rem;
     margin-right: 7rem;
+    a {
+        text-decoration:none;   
+    }
 `
 export const Home = styled.span`
     cursor: pointer;
@@ -70,3 +73,4 @@ export const Perfil = styled.span`
     color: ${color => color.color};
     font-size: 18px;
 `
+

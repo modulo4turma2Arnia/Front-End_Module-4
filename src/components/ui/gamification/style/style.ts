@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Guardians from "./font/Guardians.ttf";
+
 
 export const FieldGame = styled.div`
     display: flex;
@@ -8,11 +10,23 @@ export const FieldGame = styled.div`
     gap: 0.5rem;
     z-index: 9;
 `
+
+
+
+
+
+  
 export const Points = styled.h1`
     font-family: Guardians;
     color: var(--primary--color-30);
-    font-size: 5.5rem;
+    font-size: 5rem;
     margin-bottom: -1rem;
+    @font-face {
+    font-family: 'Guardians';
+    src: url('${Guardians}') format('truetype');
+  }
+  font-family: Guardians,  sans-serif;
+
 `
 export const Balance = styled.h3`
     font-family: 'Sora', sans-serif;
