@@ -1,12 +1,13 @@
-import * as C from './style/style'
 import React from 'react'
 import { CardsProps } from '../../../types/cardsProps/CardsProps'
+import * as C from './style/style'
+
 
 export const Cards: React.FC<CardsProps> = ({ product, isActive }) => {
     //const [showDetails, setShowDetails] = React.useState(false)
 
     if (!product || !product.name || !product.description || !product.price || !product.image) {
-        return <C.NotFound>Produto não encontrado</C.NotFound>
+        return <div>Produto não encontrado</div>;
     }
 
     return(
@@ -16,7 +17,7 @@ export const Cards: React.FC<CardsProps> = ({ product, isActive }) => {
                 <C.FieldDescription>
                     <C.HeadingFive>{product.name}</C.HeadingFive>
                     <C.HeadingFive>Bluetooth over-ear-edifier</C.HeadingFive>
-                    <C.Paragraph>{product.price} jóias</C.Paragraph>
+                    <C.Paragraph>2 jóias</C.Paragraph>
                     {/* { showDetails && (
                     <>
                         <C.Paragraph>{product.description}</C.Paragraph>
