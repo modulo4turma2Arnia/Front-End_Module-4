@@ -1,5 +1,4 @@
 import * as C from "./style/style";
-import 
 import { Cards } from "../../card/Card";
 import { ProfileCard } from "../profileCard";
 import { UserDataProps } from "../../../../types/userProps/UserProps";
@@ -29,7 +28,7 @@ export const RescCard = (data: any) => {
         "Setembro", "Outubro", "Novembro", "Dezembro"
     ];
 
-    const [age, month, day] = dateString.split('-');
+    const [month, day] = dateString.split('-');
 
     const monthName = monthNames[parseInt(month, 10) - 1];
 
@@ -58,5 +57,5 @@ export const RescCard = (data: any) => {
         </C.Content>
       </ProfileCard>
     </>
-  );
-};
+  )
+}

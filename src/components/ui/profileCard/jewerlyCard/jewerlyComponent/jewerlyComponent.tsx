@@ -1,18 +1,12 @@
+import { JewerlyProps } from "../../../../../types/jewelyProps/JewerlyProps";
 import * as C from "./style/style";
 
-type JewerlyProps = {
-  img: string;
-  title: string;
-  jewerlyCount: number;
-  description: string;
-};
-
-export const JewerlyComponent: React.FC = ({
+export const JewerlyComponent: React.FC<JewerlyProps> = ({
   img,
   title,
   jewerlyCount,
   description,
-}: JewerlyProps) => {
+}) => {
   return (
     <C.Container>
       <C.ImgField>

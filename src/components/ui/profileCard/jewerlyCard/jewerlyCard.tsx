@@ -13,7 +13,7 @@ export const JewerlyCard: React.FC = (data: any) => {
             <JewerlyComponent
             img={jewelrie.image}
             title={jewelrie.type}
-            // jewerlyCount={2}
+            jewerlyCount={2}
             description={jewelrie.habilities}
             />
         )}
