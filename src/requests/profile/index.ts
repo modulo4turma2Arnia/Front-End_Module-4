@@ -1,14 +1,14 @@
 import axios from "axios";
 import { CulturePowerPath } from "../../services/url";
-import { CardProps } from "../../types/cardProps/CardProps";
+import { UserDataProps } from "../../types/userProps/UserProps";
 
-export const GetDataCards = async () : Promise<CardProps> =>{
+export const GetDataUser = async () : Promise<UserDataProps> =>{
     try {
         const token = localStorage.getItem('token')
         const headers = {
             Authorization: `Bearer ${token}`
         }
-        const result = await CulturePowerPath.get('products', { headers })
+        const result = await CulturePowerPath.get('users/infouser', { headers })
 
         if(result.status === 200){
             return result.data

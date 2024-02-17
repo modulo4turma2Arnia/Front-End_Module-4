@@ -1,20 +1,21 @@
 import React from "react";
 import * as C from "./style/style";
 import { Link } from "react-router-dom";
-import avatar from "../../../assets/images/avatar.jpg"
+import avatar from "../../../assets/images/avatar.jpg";
 import { HeaderProps } from "../../../types/headerProps/HeaderProps";
-import { GetDataUser } from "../../../requests/dataUsers";
+import { GetDataUser } from "../../../requests/register";
 
 export const Header: React.FC<HeaderProps> = ({ textColor }) => {
   const [userName, setUserName] = React.useState('')
-  const [userImage, setUserImage] = React.useState('')
 
   React.useEffect(() => {
     const fetchUser = async () => {
       try {
-        const user = await GetDataUser()
-      setUserName(user.FirstName)
-      setUserImage(user.profileImage)
+        await GetDataUser()
+      const firstName = localStorage.getItem('userFirstName');
+      if(firstName){
+        setUserName(firstName)
+      }
       } catch (error) {
         console.log(error)
       }
@@ -22,12 +23,13 @@ export const Header: React.FC<HeaderProps> = ({ textColor }) => {
     fetchUser()
   }, [])
   
+
   return (
     <C.Header>
       <C.FieldHeader>
         <C.FieldImage>
           <C.ImgCircle>
-            <C.Image src={userImage || avatar} />
+            <C.Image src={avatar} />
           </C.ImgCircle>
           <C.FieldSpan>
             <C.Greetings color={textColor}>Olá, </C.Greetings>
