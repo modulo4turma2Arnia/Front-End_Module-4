@@ -12,5 +12,5 @@ export const SuccessRescue: React.FC = () => {
         <ProductRescuedCard />
       </C.Container>
     </>
-  );
-};
+  )
+}
