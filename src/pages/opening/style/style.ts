@@ -117,6 +117,18 @@ export const Input = styled.input`
 `;
 export const InputWrapper = styled.div`
 `;
+
+export const LabelRemeber = styled.label`
+display:flex;
+padding: 2% 1%;
+margin-top: -25px;
+align-items: center;
+
+ input {
+  margin: 0 2%;
+ }  
+`
+
 export const IconWrapper = styled.div`
   position: relative;
   left: 17rem;
