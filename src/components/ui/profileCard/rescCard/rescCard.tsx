@@ -1,4 +1,5 @@
 import * as C from "./style/style";
+import 
 import { Cards } from "../../card/Card";
 import { ProfileCard } from "../profileCard";
 import { UserDataProps } from "../../../../types/userProps/UserProps";
