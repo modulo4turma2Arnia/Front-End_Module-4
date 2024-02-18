@@ -12,10 +12,8 @@ import { CardProps } from '../../types/cardProps/CardProps'
 import { GetDataCards } from '../../requests/products'
 import { Spinner } from '../../components/ui/spinner/Spinner';
 import { ErrorComponent } from '../../components/ui/error/ErrorComponent';
+import { Product } from '../../types/product/Product';
 
-type Product = {
-    id: number
-}
 
 export const Home: React.FC = () => {
     const [products, setProducts] = React.useState<Array<CardProps>>([])
