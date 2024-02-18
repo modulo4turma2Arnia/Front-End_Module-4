@@ -10,7 +10,7 @@ export const FieldSpinner = styled.div`
     justify-content: center; 
     align-items: center; 
     height: 100vh;
-    background-color: #cccccc;
+    background-color: white;
 `
 export const BoxSpinner = styled.div`
     border: 16px solid #f3f3f3; 

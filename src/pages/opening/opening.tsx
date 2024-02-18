@@ -7,7 +7,6 @@ import { useLogin } from "../../hooks/useLogin";
 import { handleSubmit } from "../../services/handles/handleSubmit/handleSubmit";
 
 export const Opening: React.FC = () => {
-
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [showLoginBtn, setShowLoginBtn] = useState(true);

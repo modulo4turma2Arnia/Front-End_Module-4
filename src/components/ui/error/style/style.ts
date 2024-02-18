@@ -5,7 +5,7 @@ export const FieldError = styled.div`
     justify-content: center; 
     align-items: center; 
     height: 100vh;
-    background-color: #cccccc;
+    background-color: white;
 `
 export const Message = styled.h3`
     color: #800080; 

@@ -4,6 +4,7 @@ import { Opening } from "../pages//opening/opening";
 import { Home } from "../pages/home/home";
 import { Profile } from "../pages/profile/profile";
 import { Product } from "../pages/product/product";
+import { Products } from "../pages/products/produtcs";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/products",
+    element: <Products />,
   },
   {
     path: "/product/:id",
@@ -31,5 +36,5 @@ export const Router = () => {
         <RouterProvider router={router} />
       </Suspense>
     </>
-  )
-}
+  );
+};

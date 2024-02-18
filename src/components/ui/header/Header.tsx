@@ -1,27 +1,27 @@
 import React from "react";
 import * as C from "./style/style";
 import { Link } from "react-router-dom";
-import avatar from "../../../assets/images/avatar.jpg"
+import avatar from "../../../assets/images/avatar.jpg";
 import { HeaderProps } from "../../../types/headerProps/HeaderProps";
 import { GetDataUser } from "../../../requests/dataUsers";
 
 export const Header: React.FC<HeaderProps> = ({ textColor }) => {
-  const [userName, setUserName] = React.useState('')
-  const [userImage, setUserImage] = React.useState('')
+  const [userName, setUserName] = React.useState("");
+  const [userImage, setUserImage] = React.useState("");
 
   React.useEffect(() => {
     const fetchUser = async () => {
       try {
-        const user = await GetDataUser()
-      setUserName(user.FirstName)
-      setUserImage(user.profileImage)
+        const user = await GetDataUser();
+        setUserName(user.FirstName);
+        setUserImage(user.profileImage);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    }
-    fetchUser()
-  }, [])
-  
+    };
+    fetchUser();
+  }, []);
+
   return (
     <C.Header>
       <C.FieldHeader>
@@ -36,14 +36,16 @@ export const Header: React.FC<HeaderProps> = ({ textColor }) => {
         </C.FieldImage>
       </C.FieldHeader>
       <C.FieldMenu>
-        <Link to="/home">
+        <Link to="/home" style={{textDecoration: 'none'}}>
           <C.Home color={textColor}>Inicio</C.Home>
         </Link>
-        <C.Products color={textColor}>Produtos</C.Products>
-        <Link to="/profile">
+        <Link to="/products" style={{textDecoration: 'none'}}>
+          <C.Products color={textColor}>Produtos</C.Products>
+        </Link>
+        <Link to="/profile" style={{textDecoration: 'none'}}>
           <C.Perfil color={textColor}>Meu Perfil</C.Perfil>
         </Link>
       </C.FieldMenu>
     </C.Header>
-  )
-}
+  );
+};
