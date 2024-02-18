@@ -1,11 +1,10 @@
 import { ProfileCard } from "../profileCard";
 import * as C from "./style/style";
 import avatar from "../../../../assets/images/avatar.jpg";
-import { UserDataProps } from "../../../../types/userProps/UserProps";
+import { DataCardProps } from "../../../../types/dataCardProps/DataCardProps";
 
-
-export const DataCard = (data: any) => {
-  const userInfo: UserDataProps = data.dataUser
+export const DataCard: React.FC<DataCardProps> = ({ dataUser }) => {
+  const userInfo = dataUser
 
   return (
     <>
@@ -25,5 +24,5 @@ export const DataCard = (data: any) => {
         </C.FormContainer>
       </ProfileCard>
     </>
-  );
-};
+  )
+}

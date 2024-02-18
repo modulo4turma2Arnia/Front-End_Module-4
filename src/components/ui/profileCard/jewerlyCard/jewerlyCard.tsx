@@ -1,15 +1,15 @@
 import { ProfileCard } from "../profileCard";
 import { JewerlyComponent } from "./jewerlyComponent/jewerlyComponent";
-import { UserDataProps } from "../../../../types/userProps/UserProps";
+import { JewelyCardProps } from "../../../../types/jewelyCardProps/JewelyCardProps";
+import { JewelrieType } from "../../../../types/jewelrieType/JewelrieType";
 
-
-export const JewerlyCard: React.FC = (data: any) => {
-  const userInfo: UserDataProps = data.dataUser
-  const jewelriesList: [] = userInfo.jewelries
+export const JewerlyCard: React.FC<JewelyCardProps> = ({ dataUser }) => {
+  const userInfo = dataUser
+  const jewelriesList: JewelrieType[] | null  = userInfo.jewelries
 
   return (
     <ProfileCard title="Minhas jóias">
-        {jewelriesList.map((jewelrie: any) => 
+        {jewelriesList && jewelriesList.map((jewelrie: any) => 
             <JewerlyComponent
             img={jewelrie.image}
             title={jewelrie.type}
@@ -18,5 +18,5 @@ export const JewerlyCard: React.FC = (data: any) => {
             />
         )}
     </ProfileCard>
-  );
-};
+  )
+}

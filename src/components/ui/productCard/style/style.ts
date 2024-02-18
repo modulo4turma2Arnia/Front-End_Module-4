@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  gap: 10rem;
 `;
 export const NotFound = styled.div`
 `
-
+export const FieldImage = styled.div`
+  margin-left: 2rem;
+`
 export const Img = styled.img`
   width: auto;
   height: 20rem;
@@ -21,7 +22,7 @@ export const Title = styled.div`
   font-family: Sora, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 export const Details = styled.div`
@@ -44,20 +45,20 @@ export const DiamondIcon = styled.div``;
 
 export const Description = styled.div`
   font-family: Sora, sans-serif;
-  font-family: 16px;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   color: #616161;
+  width: 80%;
 `;
 export const Space = styled.br``
 export const RescueBtn = styled.button`
   background-color: var(--primary--color);
   width: 15rem;
-  height: 4rem;
+  padding: 0.8rem;
   color: white;
   font-size: 18px;
   font-family: Sora, sans-serif;
   font-weight: 700;
   border-radius: 16px;
-  margin-top: 3rem;
+  margin-top: 1.6rem;
   cursor: pointer;
 `;

@@ -8,20 +8,20 @@ import { Month } from "../../../utils";
 import { useEffect, useState } from "react";
 
 export const Gamification: React.FC = () => {
-  const currentData = new Date();
-  const day = currentData.getDate();
-  const month = currentData.getMonth();
-  const year = currentData.getFullYear();
-  const [credits, setCredits] = useState<string | null>("0");
+  const currentData = new Date()
+  const day = currentData.getDate()
+  const month = currentData.getMonth()
+  const year = currentData.getFullYear()
+  const [credits, setCredits] = useState<string | null>("0")
 
   useEffect(() => {
-    const storedCredits = localStorage.getItem("CREDITS");
+    const storedCredits = localStorage.getItem("CREDITS")
     if (storedCredits !== null) {
       setCredits(
         storedCredits.length < 2 ? `0${storedCredits}` : storedCredits
-      );
+      )
     }
-  }, []);
+  }, [])
 
   
   return (

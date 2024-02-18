@@ -1,9 +1,10 @@
 import * as C from './style/style'
+import * as React from 'react';
 import { Link } from "react-router-dom";
 import { Gamification } from '../../components/ui/gamification/Gamification'
 import { Header } from '../../components/ui/header/Header'
 import { IconWithMargin } from './style/style'
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { useOutsideClick } from '../../hooks/useOutsideClick'
 import { ImageHero } from '../../components/ui/imageHeros/ImageHeros'
 import { Cards } from '../../components/ui/card/Card'
@@ -11,6 +12,10 @@ import { CardProps } from '../../types/cardProps/CardProps'
 import { GetDataCards } from '../../requests/products'
 import { Spinner } from '../../components/ui/spinner/Spinner';
 import { ErrorComponent } from '../../components/ui/error/ErrorComponent';
+
+type Product = {
+    id: number
+}
 
 export const Home: React.FC = () => {
     const [products, setProducts] = React.useState<Array<CardProps>>([])
@@ -59,7 +64,7 @@ export const Home: React.FC = () => {
             <C.FieldSearch>
                 <C.SearchBox 
                     clicked={clicked} 
-                    onClick={(event) => {
+                    onClick={(event: React.ChangeEvent<HTMLInputElement>) => {
                         event.stopPropagation()
                         setClicked(true)}}
                     >
@@ -67,7 +72,7 @@ export const Home: React.FC = () => {
                     <C.Search placeholder='O que você esta buscando? '
                         type='text'
                         value={searchTerm}
-                        onChange={(event) => setSearchTerm(event.target.value)}
+                        onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(event.target.value)}
                     />   
                 </C.SearchBox>
             </C.FieldSearch>
@@ -80,7 +85,7 @@ export const Home: React.FC = () => {
                 <C.HeadingThree>Produtos para você</C.HeadingThree>
             </C.FieldTitle>
             <C.ContainerCards>
-                {products.map((product) => (
+                {products.map((product: Product) => (
                 <Link to={`/product/${product.id}`} className='noUnderline'>
                     <Cards
                         key={product.id} 

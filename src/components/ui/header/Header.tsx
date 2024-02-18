@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import * as C from "./style/style";
 import { Link } from "react-router-dom";
 import avatar from "../../../assets/images/avatar.jpg"
 import { HeaderProps } from "../../../types/headerProps/HeaderProps";
 import { GetDataUser } from "../../../requests/dataUsers";
+import * as React from "react";
 
 export const Header: React.FC<HeaderProps> = ({ textColor }) => {
   const [userName, setUserName] = React.useState('')

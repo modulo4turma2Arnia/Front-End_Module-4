@@ -1,10 +1,9 @@
 import * as C from "./style/style";
+import * as React from "react";
 import { IoDiamondOutline } from "react-icons/io5";
 import { Link, useParams } from "react-router-dom";
 import { CardProps } from "../../../types/cardProps/CardProps";
-import React from "react";
 import { GetProduct } from "../../../requests/product_id";
-
 
 export const ProductCard: React.FC = () => {
   const { id } = useParams<{ id: string }>()
@@ -35,7 +34,9 @@ export const ProductCard: React.FC = () => {
 
   return (
     <C.Container>
-      <div><C.Img src={product?.image}></C.Img></div>
+      <C.FieldImage>
+        <C.Img src={product?.image}></C.Img>
+      </C.FieldImage>
       <C.Content>
         <C.Title>{product?.name}</C.Title>
         <C.Details>
@@ -49,7 +50,7 @@ export const ProductCard: React.FC = () => {
           <C.Space></C.Space>
           {secondHalf}
         </C.Description>
-        <Link to="/success-rescue">
+        <Link to={`/success-rescue/${product?.id}`}>
           <C.RescueBtn>Resgatar</C.RescueBtn>
         </Link>
       </C.Content>

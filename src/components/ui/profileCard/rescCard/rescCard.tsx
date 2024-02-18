@@ -1,11 +1,11 @@
 import * as C from "./style/style";
 import { Cards } from "../../card/Card";
 import { ProfileCard } from "../profileCard";
-import { UserDataProps } from "../../../../types/userProps/UserProps";
 import { CardProps } from "../../../../types/cardProps/CardProps";
+import { RescCardProps } from "../../../../types/rescCardProps/RescCardProps";
 
-export const RescCard = (data: any) => {
-  const userInfo: UserDataProps = data.dataUser
+export const RescCard: React.FC<RescCardProps> = ({ dataUser}) => {
+  const userInfo = dataUser
 
   function grupForDate(array: any){
     const grup:any = {}
