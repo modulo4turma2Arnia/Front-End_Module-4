@@ -4,6 +4,7 @@ import { IoDiamondOutline } from "react-icons/io5";
 import { Link, useParams } from "react-router-dom";
 import { CardProps } from "../../../types/cardProps/CardProps";
 import { GetProduct } from "../../../requests/product_id";
+import { RedeemProduct } from "../../../requests/products";
 
 export const ProductCard: React.FC = () => {
   const { id } = useParams<{ id: string }>()
@@ -32,6 +33,10 @@ export const ProductCard: React.FC = () => {
     secondHalf = parts.slice(parts.length / 2).join(" ")
   }
 
+  const reedem = async () => {
+    await RedeemProduct(product?.id)
+  }
+
   return (
     <C.Container>
       <C.FieldImage>
@@ -51,7 +56,7 @@ export const ProductCard: React.FC = () => {
           {secondHalf}
         </C.Description>
         <Link to={`/success-rescue/${product?.id}`}>
-          <C.RescueBtn>Resgatar</C.RescueBtn>
+          <C.RescueBtn onClick={reedem}>Resgatar</C.RescueBtn>
         </Link>
       </C.Content>
     </C.Container>

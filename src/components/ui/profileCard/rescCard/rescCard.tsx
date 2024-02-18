@@ -3,6 +3,7 @@ import { Cards } from "../../card/Card";
 import { ProfileCard } from "../profileCard";
 import { CardProps } from "../../../../types/cardProps/CardProps";
 import { RescCardProps } from "../../../../types/rescCardProps/RescCardProps";
+import { Month } from "../../../../utils";
 
 export const RescCard: React.FC<RescCardProps> = ({ dataUser}) => {
   const userInfo = dataUser
@@ -22,15 +23,10 @@ export const RescCard: React.FC<RescCardProps> = ({ dataUser}) => {
   }
 
   function dateConvert(dateString: string) {
-    const monthNames = [
-        "Janeiro", "Fevereiro", "Março", "Abril",
-        "Maio", "Junho", "Julho", "Agosto",
-        "Setembro", "Outubro", "Novembro", "Dezembro"
-    ];
+    
+    const [_, month, day] = dateString.split('-');
 
-    const [month, day] = dateString.split('-');
-
-    const monthName = monthNames[parseInt(month, 10) - 1];
+    const monthName = Month[parseInt(month, 10) - 1];
 
     return `${day} de ${monthName}`;
 }
