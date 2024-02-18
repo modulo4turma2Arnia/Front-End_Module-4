@@ -44,11 +44,13 @@ export const Header: React.FC<HeaderProps> = ({ textColor }) => {
         </C.FieldImage>
       </C.FieldHeader>
       <C.FieldMenu>
-        <Link to="/home">
+      <Link to="/home" style={{textDecoration: 'none'}}>
           <C.Home color={textColor}>Inicio</C.Home>
         </Link>
-        <C.Products color={textColor}>Produtos</C.Products>
-        <Link to="/profile">
+        <Link to="/products" style={{textDecoration: 'none'}}>
+          <C.Products color={textColor}>Produtos</C.Products>
+        </Link>
+        <Link to="/profile" style={{textDecoration: 'none'}}>
           <C.Perfil color={textColor}>Meu Perfil</C.Perfil>
         </Link>
       </C.FieldMenu>
