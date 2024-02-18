@@ -56,7 +56,7 @@ return (
     <C.FieldSearch>
         <C.SearchBox
         clicked={clicked}
-        onClick={(event) => {
+        onClick={(event: MouseEvent) => {
             event.stopPropagation();
             setClicked(true);
         }}
@@ -66,7 +66,7 @@ return (
             placeholder="O que você esta buscando? "
             type="text"
             value={searchTerm}
-            onChange={(event) => setSearchTerm(event.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(event.target.value)}
         />
         </C.SearchBox>
     </C.FieldSearch>
