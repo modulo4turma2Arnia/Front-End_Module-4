@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import GlobalStyle from "./assets/styles/globalstyle";
 import { Router } from "./config/router";
 import { ProductContext } from "./contexts/ProductContext";

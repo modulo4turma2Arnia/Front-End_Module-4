@@ -1,5 +1,4 @@
 import * as C from './style/style'
-import React from 'react'
 import { CardsProps } from '../../../types/cardsProps/CardsProps'
 
 export const Cards: React.FC<CardsProps> = ({ product, isActive }) => {

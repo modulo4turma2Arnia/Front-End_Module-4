@@ -1,6 +1,6 @@
 import * as C from "./style/style";
 import description from "../../assets/images/description.png";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from 'react-router-dom'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useRef, useState, useEffect, ChangeEvent } from "react";
 import { useLogin } from "../../hooks/useLogin";
@@ -85,7 +85,7 @@ export const Opening: React.FC = () => {
                 name="email"
                 required
                 value={rememberedEmail}
-                onChange={(e) => setRememberedEmail(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRememberedEmail(e.target.value)}
               />
               <C.Legend>Senha</C.Legend>
               <C.InputWrapper>
@@ -94,7 +94,7 @@ export const Opening: React.FC = () => {
                   name="password"
                   required
                   value={rememberedPassword}
-                  onChange={(e) => setRememberedPassword(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRememberedPassword(e.target.value)}
                 />
                 <C.IconWrapper onClick={handleIconClick}>
                   {passwordVisible ? (
