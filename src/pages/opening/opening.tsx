@@ -1,7 +1,7 @@
 import * as C from "./style/style";
 import description from '../../assets/images/description.png'
-import {useNavigate} from 'react-router-dom'
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons";
+import { useNavigate } from 'react-router-dom'
+// import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons";
 import { useRef, useState, useEffect, ChangeEvent } from "react";
 import { useLogin } from "../../hooks/useLogin";
 import { handleSubmit } from "../../services/handles/handleSubmit/handleSubmit";
