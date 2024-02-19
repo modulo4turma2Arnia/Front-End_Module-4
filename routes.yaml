@@ -1,0 +1,2 @@
+catch-all:
+  handler: "@render/functions/catch-all"
