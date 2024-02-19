@@ -1,0 +1,4 @@
+routes:
+  - destination: /
+    continue: true
+    source: /.*
