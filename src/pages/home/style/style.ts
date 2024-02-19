@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import BackgroundNew from '../../../assets/images/Rectangle.jpg'
 
 export const BackGroundHero = styled.div`
     width: 100%; 
@@ -7,7 +8,7 @@ export const BackGroundHero = styled.div`
 `;
 
 export const ContainerHome = styled.main`
-    background-image: url("../../assets/images/Rectangle.jpg");
+    background-image: url(${BackgroundNew});
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-color: rgba(80, 43, 107, 0.9); 

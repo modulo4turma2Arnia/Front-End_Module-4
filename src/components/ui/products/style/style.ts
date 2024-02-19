@@ -1,6 +1,8 @@
 import { CiSearch } from "react-icons/ci";
 import styled from "styled-components";
 import { SearchBoxProps } from "../../../../types/searchProps/SearchBoxProps";
+import BackgroundNew from '../../../../assets/images/Background.png';
+
 
 export const Container = styled.div``;
 
@@ -41,7 +43,7 @@ export const ContainerHero = styled.div`
     margin-bottom: 2rem;
 `
 export const FieldImageHero = styled.div`
-    background-image: url("./src/assets/images/Background.png");
+    background-image: url(${BackgroundNew});
     background-repeat: no-repeat;
     width: 84%;
     overflow: hidden;
