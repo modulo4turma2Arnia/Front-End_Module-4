@@ -24,10 +24,10 @@ Antes de começar, certifique-se de ter o [Node.js](https://nodejs.org/) instala
 ## 👨‍💻 Dependências Utilizadas
 📚 Aqui estão as estrelas do show, as dependências que fazem tudo funcionar:
 
-- [react-router-dom](https://www.npmjs.com/package/bcrypt)
-- [styled-components](https://docs.nestjs.com/recipes/sql-typeorm)
-- [react-icons](https://jwt.io/)
-- [axios](https://firebase.google.com/?hl=pt)
+- [react-router-dom](https://github.com/remix-run/react-router)
+- [styled-components](https://github.com/styled-components/styled-components)
+- [react-icons](https://github.com/react-icons/react-icons)
+- [axios](https://axios-http.com/ptbr/docs/intro)
 
 
 ## 🛣️ Rotas do APP
