@@ -32,11 +32,11 @@ export const RescCard: React.FC<RescCardProps> = ({ dataUser}) => {
 }
 
   const products = grupForDate(userInfo.products)
-  console.log(products)
+const totalProducts = userInfo.products.length;
 
   return (
     <>
-      <ProfileCard title="Meus Resgates">
+    <ProfileCard title={`Meus Resgates (${totalProducts})`}>
         <C.Content>
           {
             Object.keys(products).map(data => (
