@@ -12,7 +12,7 @@ export const RescCard: React.FC<RescCardProps> = ({ dataUser}) => {
     const grup:any = {}
 
     array.forEach((obj: any) => {
-      const date: any = obj.createdAt.split('T')[0]
+      const date: any = obj.updatedAt.split('T')[0]
       if(!grup[date]){
         grup[date] = []
       }

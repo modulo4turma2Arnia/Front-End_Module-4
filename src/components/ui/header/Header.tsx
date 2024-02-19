@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ textColor }) => {
       }
     }
     fetchUser()
-  }, [])
+  }, [userName, userImage, lastName])
   
   return (
     <C.Header>

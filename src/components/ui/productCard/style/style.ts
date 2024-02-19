@@ -56,6 +56,7 @@ export const RescueBtn = styled.button`
   padding: 0.8rem;
   color: white;
   font-size: 18px;
+  border:none;
   font-family: Sora, sans-serif;
   font-weight: 700;
   border-radius: 16px;
