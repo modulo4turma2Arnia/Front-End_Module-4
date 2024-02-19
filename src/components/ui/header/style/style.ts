@@ -5,9 +5,9 @@ export const Header = styled.header`
     justify-content: space-between;
     margin-top: -1rem;
     z-index: 9;
-    font
     
-`
+`;
+
 export const FieldHeader = styled.div`
     padding: 3rem;
     display: flex;

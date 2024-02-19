@@ -1,7 +1,7 @@
 import * as C from "./style/style";
 import description from '../../assets/images/description.png'
 import { useNavigate } from 'react-router-dom'
-// import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useRef, useState, useEffect, ChangeEvent } from "react";
 import { useLogin } from "../../hooks/useLogin";
 import { handleSubmit } from "../../services/handles/handleSubmit/handleSubmit";
@@ -45,23 +45,26 @@ export const Opening: React.FC = () => {
   }
 
   useEffect(() => {
-      
-
     const rememberedEmail = localStorage.getItem("REMEMBERED_EMAIL");
     const rememberedPassword = localStorage.getItem("REMEMBERED_PASSWORD");
+  
     if (rememberedEmail && rememberedPassword) {
-      if (rememberedEmail && rememberedPassword) {
-        // Se tiver email e senha lembrados, atualiza eles nos estados
-        setRememberedEmail(rememberedEmail);
-        setRememberedPassword(rememberedPassword);
-      }
+      setRememberedEmail(rememberedEmail);
+      setRememberedPassword(rememberedPassword);
+    } else {
+      // Definir os valores padrão dos inputs apenas se não houver informações lembradas
+      setRememberedEmail("");
+      setRememberedPassword("");
     }
-  }, [rememberedEmail, rememberedPassword])
-
+  }, []);
+  
+  useEffect(() => {
     if (remember) {
       localStorage.setItem("REMEMBERED_EMAIL", rememberedEmail);
       localStorage.setItem("REMEMBERED_PASSWORD", rememberedPassword);
-    } 
+    }
+  }, [remember, rememberedEmail, rememberedPassword]);
+  
 
   return (
     <C.Container onClick={handleOutsideClick}>
