@@ -28,6 +28,7 @@ export const FormContainer = styled.div`
     cursor: pointer;
     color: dimgray;
     font-size: 10px;
+    background-color: transparent;
   }
 `;
 

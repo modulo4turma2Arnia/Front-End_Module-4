@@ -12,7 +12,8 @@ export const ProductRescuedCard: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const [product, setProduct] = React.useState<CardProps | null>(null)
   const [credits, setCredits] = React.useState<string | null>("0")
-  
+  const [insufficientCredits, setInsufficientCredits] = React.useState<boolean>(false);
+
   React.useEffect(() => {
     const fetchProductData = async () => {
       try {
@@ -34,6 +35,11 @@ export const ProductRescuedCard: React.FC = () => {
     // Calculando o saldo após a compra do produto
     const remainingCredits = product ? (parseInt(credits || "0") - product.price) : 0;
 
+    React.useEffect(() => {
+      if (product && credits) {
+        setInsufficientCredits(product.price > parseInt(credits));
+      }
+    }, [product, credits]);
 
   return (
     <>
@@ -41,7 +47,8 @@ export const ProductRescuedCard: React.FC = () => {
     <C.Container>
       <div><C.Image src={successPhoto} alt="" /></div>
       <C.Box>
-        <C.Title>Produto resgatado com sucesso!</C.Title>
+        {/* <C.Title>Produto resgatado com sucesso!</C.Title> */}
+        <C.Title>{insufficientCredits ? "Parece que você não tem saldo suficiente" : "Produto resgatado com sucesso!"}</C.Title>
         <C.ProductInfo>
           <C.Img src={product?.image}></C.Img>
           <C.ProductContent>
