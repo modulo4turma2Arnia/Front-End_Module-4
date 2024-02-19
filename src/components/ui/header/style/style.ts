@@ -5,6 +5,7 @@ export const Header = styled.header`
     justify-content: space-between;
     margin-top: -1rem;
     z-index: 9;
+    
 `;
 
 export const FieldHeader = styled.div`

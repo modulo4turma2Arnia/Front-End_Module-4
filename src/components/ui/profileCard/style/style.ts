@@ -15,6 +15,7 @@ export const Card = styled.div`
   border-radius: 40px;
   box-shadow: 1px 1px 14px 2px lightgray;
   margin-bottom: 5rem;
+  
 `;
 
 export const Title = styled.div`
