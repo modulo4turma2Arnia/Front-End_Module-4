@@ -56,7 +56,7 @@ return (
     <C.FieldSearch>
         <C.SearchBox
         clicked={clicked}
-        onClick={(event: MouseEvent) => {
+        onClick={(event) => {
             event.stopPropagation();
             setClicked(true);
         }}
