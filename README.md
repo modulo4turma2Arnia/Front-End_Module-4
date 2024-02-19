@@ -1,52 +1,36 @@
-# 🚀 API Culture Power
+# 🚀 APP Culture Power
  ### Bem vindo(a)!
  ```bash
-Esta API foi desenvolvida para uma empresa que deseja gamificar os resultados e recompensar seus colaboradores de acordo com seu desempenho. Os colaboradores podem resgatar produtos da loja virtual da empresa usando as joias adquiridas durante suas atividades.
+Este APP foi desenvolvida para uma empresa que deseja gamificar os resultados e recompensar seus colaboradores de acordo com seu desempenho. Os colaboradores podem resgatar produtos da loja virtual da empresa usando as joias adquiridas durante suas atividades.
 ```
 ## 💻 Instalação
 
 Antes de começar, certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 ```bash
 # Clone esse repositório
-- $ git clone https://github.com/modulo4turma2Arnia/Back-End_Module-4
+- $ git clone https://github.com/modulo4turma2Arnia/Front-End_Module-4
 
 # Vá para o repositório Back-end
-- $ cd Back-Modulo4-Turma2
+- $ cd Front-End_Module-4
 
 # Instale as dependencias
-- $ npm i firebase typeorm pg @nestjs/core @nestjs/common @nestjs/swagger @nestjs/jwt @nestjs/config bcrypt class-transformer class-validator
+- $ npm i axios styled-components react-icons react-roter-dom 
 
 
 # Rode a aplicação
-- $ npm run start:dev
-```
-## 👨‍💻 Entidades utilizadas no projeto
-```bash
-- # Auth
-- $ Responsavel pela autenticação da API.
-- # Products
-- $ Registra os produtos, altera e também é responsavel por remover um produto do banco de dados.
-- # Joias
-- $ É a entidade responsavel por criar as jóias, assim como em prudutos também tem todos as rotas de um CRUD.
-- #  Users
-- $ E por último a entidade de user que é responsavel pelo usuário. assim como nas outras entidades também tem todos as rotas de um CRUD.
+- $ npm run dev
 ```
 
 ## 👨‍💻 Dependências Utilizadas
 📚 Aqui estão as estrelas do show, as dependências que fazem tudo funcionar:
 
-- [bcrypt](https://www.npmjs.com/package/bcrypt)
-- [typeORM](https://docs.nestjs.com/recipes/sql-typeorm)
-- [jsonwebtoken](https://jwt.io/)
-- [firebase](https://firebase.google.com/?hl=pt)
-- [@nestjs/common](https://www.npmjs.com/package/@nestjs/common)
-- [@nestjs/swagger](https://docs.nestjs.com/openapi/introduction)
-- [@nestjs/jwt](https://docs.nestjs.com/security/authentication)
-- [@nestjs/config](https://docs.nestjs.com/techniques/configuration)
-- [@Class-transformer @Class-validator](https://docs.nestjs.com/techniques/validation)
+- [react-router-dom](https://www.npmjs.com/package/bcrypt)
+- [styled-components](https://docs.nestjs.com/recipes/sql-typeorm)
+- [react-icons](https://jwt.io/)
+- [axios](https://firebase.google.com/?hl=pt)
 
 
-## 🛣️ Rotas da API
+## 🛣️ Rotas do APP
 
 ### 🔵 GET v1/users/infouser
 - **Descrição**: Retorna todas as informações do usuário. (Necessita autenticação).
@@ -67,8 +51,8 @@ Antes de começar, certifique-se de ter o [Node.js](https://nodejs.org/) instala
 - **Corpo da Requisição**:
 ```javascript
 {
-email: "fulano@ciclano.com.br",
-password: "senha1234"
+	email: "fulano@ciclano.com.br",
+	password: "senha1234"
 }
 ```
 ### 🟢 POST v1/auth/register
@@ -77,23 +61,23 @@ password: "senha1234"
 - **Observação - em caso de craição de um admin, ele deve conter a propriedade role: admin**:
 ```javascript
 {
-FirstName: "Fulano"
-LastName: "Beltrano"
-email: "beltrano@fulano.com.br"
-profileImage: "URL Da imagem enviada."
-role: "admin",
-password: "senha123"
+	FirstName: "Fulano"
+	LastName: "Beltrano"
+	email: "beltrano@fulano.com.br"
+	profileImage: "URL Da imagem enviada."
+	role: "admin",
+	password: "senha123"
 }
 ```
 
 - **Corpo da Requisição**:
 ```javascript
 {
-FirstName: "Fulano"
-LastName: "Beltrano"
-email: "beltrano@fulano.com.br"
-profileImage: "URL Da imagem enviada."
-password: "senha123"
+	FirstName: "Fulano"
+	LastName: "Beltrano"
+	email: "beltrano@fulano.com.br"
+	profileImage: "URL Da imagem enviada."
+	password: "senha123"
 }
 ```
 ### 🟢 POST v1/users/rescue/:id
@@ -124,7 +108,7 @@ password: "senha123"
 {
 	"type": "Joia do Tempo",
 	"habilities": "Nesta joia está a possibilidade de manejo da administr.....",
-  "image": "URL da imagem"
+	"image": "URL da imagem"
 }
 ```
 
@@ -143,7 +127,7 @@ type: "Joia da Mente Modificada"
 - **Corpo da Requisição**:
  ```javascript
 {
-name: "JBL Tune 720BT"
+	name: "JBL Tune 720BT"
 }
 ```
 
@@ -163,7 +147,6 @@ name: "JBL Tune 720BT"
  ```javascript
 {
   FirstName: "Fulano Editado"
-
 }
 ```
 
@@ -174,8 +157,12 @@ name: "JBL Tune 720BT"
 - **Descrição**: Remove um produto específico do banco de dados.
 
 
-
 ### Detalhes Adicionais
-- **Autores da API:** [Gabriel Anacleto](https://www.linkedin.com/in/gabriel-anacletoo/)  [Guilherme](https://github.com/syus13) 
-- **Contato:** gabrielanacleto159@live.com
+- **Autores do APP:**
+- [Esdras Marcelino da Silva](www.linkedin.com/in/esdras-marcelino-da-silva-developer-full-stack)
+- [Gabriel Anacleto]
+- [Guilherme Bernades]
+- [Lucas Carvalho]
+- [João Pires de Andrade]
+- **Contato:** esdrasmarcelino55@gmail.com
 
