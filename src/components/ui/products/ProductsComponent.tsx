@@ -56,7 +56,7 @@ return (
     <C.FieldSearch>
         <C.SearchBox
         clicked={clicked}
-        onClick={(event) => {
+        onClick={(event: React.ChangeEvent<HTMLInputElement>) => {
             event.stopPropagation();
             setClicked(true);
         }}
