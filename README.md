@@ -1,7 +1,7 @@
 # 🚀 APP Culture Power
  ### Bem vindo(a)!
  ```bash
-Este APP foi desenvolvida para uma empresa que deseja gamificar os resultados e recompensar seus colaboradores de acordo com seu desempenho. Os colaboradores podem resgatar produtos da loja virtual da empresa usando as joias adquiridas durante suas atividades.
+Este APP foi desenvolvido para uma empresa que deseja gamificar os resultados e recompensar seus colaboradores de acordo com seu desempenho. Os colaboradores podem resgatar produtos da loja virtual da empresa usando as joias adquiridas durante suas atividades.
 ```
 ## 💻 Instalação
 
