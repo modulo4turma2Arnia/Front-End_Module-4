@@ -11,11 +11,6 @@ export const FieldGame = styled.div`
     z-index: 9;
 `
 
-
-
-
-
-  
 export const Points = styled.h1`
     font-family: Guardians;
     color: var(--primary--color-30);
@@ -24,8 +19,8 @@ export const Points = styled.h1`
     @font-face {
     font-family: 'Guardians';
     src: url('${Guardians}') format('truetype');
-  }
-  font-family: Guardians,  sans-serif;
+    }
+    font-family: Guardians,  sans-serif;
 
 `
 export const Balance = styled.h3`

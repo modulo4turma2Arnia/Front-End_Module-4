@@ -41,7 +41,7 @@ export const ContainerHero = styled.div`
     margin-bottom: 2rem;
 `
 export const FieldImageHero = styled.div`
-    background-image: url("./src/assets/images/Background.png");
+    background-image: url("../../assets/images/Background.png");
     background-repeat: no-repeat;
     width: 84%;
     overflow: hidden;
