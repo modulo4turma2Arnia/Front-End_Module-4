@@ -31,6 +31,10 @@ export const ProductRescuedCard: React.FC = () => {
     fetchProductData()
   }, [id])
 
+    // Calculando o saldo após a compra do produto
+    const remainingCredits = product ? (parseInt(credits || "0") - product.price) : 0;
+
+
   return (
     <>
     <Header textColor="#502B6B" />
@@ -56,8 +60,11 @@ export const ProductRescuedCard: React.FC = () => {
         </C.Description>
         <C.BalanceContainer>
         <C.BalanceTitle>Meu saldo:</C.BalanceTitle>
+        
           <C.Count>
-            {credits && credits.length < 2 ? `0${credits}` : credits}
+          {remainingCredits >= 0 ? remainingCredits : "Saldo insuficiente"}
+            {/* {credits && credits.length < 2 ? `0${credits}` : credits} */}
+            
             </C.Count>
             <IoDiamondOutline />
         </C.BalanceContainer>
