@@ -35,5 +35,8 @@ export const BtnRescue = styled.button`
     color: var(--background--color);
     width:95%;
     padding: .6rem;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     border-radius: .5rem;
 `
