@@ -44,7 +44,10 @@ export const RescCard: React.FC<RescCardProps> = ({ dataUser}) => {
                 <C.DateResc>{dateConvert(data)}</C.DateResc>
                 <C.ContainerCards>
                   {products[data].map((product: CardProps) => (
-                    <Cards product={product}/>
+                    <Cards 
+                      product={product}
+                      isActive
+                    />
                   ))}
                 </C.ContainerCards>
               </>
