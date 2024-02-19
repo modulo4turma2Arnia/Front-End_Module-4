@@ -7,7 +7,7 @@ export const BackGroundHero = styled.div`
 `;
 
 export const ContainerHome = styled.main`
-    background-image: url("./src/assets/images/Rectangle.jpg");
+    background-image: url("../../assets/images/Rectangle.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-color: rgba(80, 43, 107, 0.9); 
