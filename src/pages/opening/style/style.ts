@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import BackgroundNew from '../../../assets/images/heavenly.jpg'
 
 export const Container = styled.div`
-  background-image: url("./src/assets/images/heavenly.jpg");
+  background-image: url(${BackgroundNew});
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 100vh;
@@ -117,6 +118,18 @@ export const Input = styled.input`
 `;
 export const InputWrapper = styled.div`
 `;
+
+export const LabelRemeber = styled.label`
+display:flex;
+padding: 2% 1%;
+margin-top: -25px;
+align-items: center;
+
+ input {
+  margin: 0 2%;
+ }  
+`
+
 export const IconWrapper = styled.div`
   position: relative;
   left: 17rem;

@@ -22,7 +22,62 @@ export const Image = styled.img`
 
 export const FormContainer = styled.div`
   margin-top: 2rem;
+  button {
+    border:none;
+    margin:1% 1%;
+    cursor: pointer;
+    color: dimgray;
+    font-size: 10px;
+    background-color: transparent;
+  }
 `;
+
+
+export const BackModal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding:2% 2%;
+  display: flex; /* Usar flexbox */
+  align-items: center; /* Centralizar verticalmente */
+  justify-content: center; /* Centralizar horizontalmente */
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta quase transparente */
+  z-index: 999; /* Z-index alto para garantir que esteja acima de tudo */
+`;
+
+
+export const CardModal = styled.div`
+background-color: #fff;
+width: 50%;
+display:flex;
+border-radius: 10px;
+padding:2% 2%;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+.BtnClose {
+  margin: 1px 0 0 99%;
+  font-size: 1em;
+  color: red;
+  background-color: transparent;
+}
+.BtnModal {
+color: #2b094f;
+background-color: #b376f5;
+margin: 2% 0;
+font-size: 1em;
+padding: 1% 4%;
+border-radius: 5px;
+}
+input {
+  padding-left:2%;
+  border-radius: 6px;
+  height: 30px;
+  border: 1px solid dimgray;
+}
+`
 
 export const Section = styled.div`
   margin-top: 0.3rem;

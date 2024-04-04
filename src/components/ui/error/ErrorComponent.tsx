@@ -1,4 +1,3 @@
-import React from 'react';
 import * as C from './style/style'
 
 export const ErrorComponent: React.FC = () => {

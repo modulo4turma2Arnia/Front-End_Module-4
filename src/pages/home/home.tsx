@@ -1,18 +1,10 @@
-import * as C from './style/style'
-import { Link } from "react-router-dom";
-import { Gamification } from '../../components/ui/gamification/Gamification'
-import { Header } from '../../components/ui/header/Header'
-import { IconWithMargin } from './style/style'
-import React, { useRef } from 'react'
-import { useOutsideClick } from '../../hooks/useOutsideClick'
-import { ImageHero } from '../../components/ui/imageHeros/ImageHeros'
-import { Cards } from '../../components/ui/card/Card'
-import { CardProps } from '../../types/cardProps/CardProps'
-import { GetDataCards } from '../../requests/products'
-import { Spinner } from '../../components/ui/spinner/Spinner';
-import { ErrorComponent } from '../../components/ui/error/ErrorComponent';
+import * as C from "./style/style";
+import { Gamification } from "../../components/ui/gamification/Gamification";
+import { Header } from "../../components/ui/header/Header";
+import { ProductsComponent } from "../../components/ui/products/ProductsComponent";
 
 export const Home: React.FC = () => {
+<<<<<<< HEAD
     const [products, setProducts] = React.useState<Array<CardProps>>([])
     const [loading, setLoading] = React.useState(true)
     const [error, setError] = React.useState<string | null>(null)
@@ -87,6 +79,17 @@ export const Home: React.FC = () => {
                 </Link>    
                 ))}
             </C.ContainerCards>
+=======
+    return (
+        <>
+        <C.ContainerHome>
+            <Header textColor="white" />
+            <C.BoxHome>
+            <Gamification />
+            </C.BoxHome>
+        </C.ContainerHome>
+        <ProductsComponent isToShow={true} />
+>>>>>>> 0405e7ebf1fc611c2b9f8a8d897393d0331ea592
         </>
     )
 }

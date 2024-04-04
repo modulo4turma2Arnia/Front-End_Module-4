@@ -1,14 +1,10 @@
+import { ProfileCardProps } from "../../../types/profileCardProps/ProfileCardProps";
 import * as C from "./style/style";
 
-type ProfileCardProps = {
-  title: string;
-  children: React.ReactNode;
-};
-
-export const ProfileCard: React.FC = ({
+export const ProfileCard: React.FC<ProfileCardProps> = ({
   title,
   children,
-}: ProfileCardProps) => {
+}) => {
   return (
     <C.Container>
       <C.Card>
@@ -16,5 +12,5 @@ export const ProfileCard: React.FC = ({
         <>{children}</>
       </C.Card>
     </C.Container>
-  );
-};
+  )
+}

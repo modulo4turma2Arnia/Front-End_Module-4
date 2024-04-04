@@ -5,9 +5,9 @@ export const Header = styled.header`
     justify-content: space-between;
     margin-top: -1rem;
     z-index: 9;
-    font
     
-`
+`;
+
 export const FieldHeader = styled.div`
     padding: 3rem;
     display: flex;
@@ -54,6 +54,9 @@ export const FieldMenu = styled.div`
     color: white;
     gap: 4rem;
     margin-right: 7rem;
+    a {
+        text-decoration:none;   
+    }
 `
 export const Home = styled.span`
     cursor: pointer;
@@ -70,3 +73,4 @@ export const Perfil = styled.span`
     color: ${color => color.color};
     font-size: 18px;
 `
+

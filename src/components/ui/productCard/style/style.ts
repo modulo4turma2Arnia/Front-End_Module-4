@@ -5,9 +5,19 @@ export const Container = styled.div`
   margin-left: 15rem;
   margin-right: 12rem;
   display: flex;
+<<<<<<< HEAD
   gap: 10rem;
 `;
 
+=======
+  justify-content: center;
+`;
+export const NotFound = styled.div`
+`
+export const FieldImage = styled.div`
+  margin-left: 2rem;
+`
+>>>>>>> 0405e7ebf1fc611c2b9f8a8d897393d0331ea592
 export const Img = styled.img`
   width: auto;
   height: 20rem;
@@ -19,7 +29,7 @@ export const Title = styled.div`
   font-family: Sora, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 export const Details = styled.div`
@@ -41,20 +51,21 @@ export const DiamondIcon = styled.div``;
 
 export const Description = styled.div`
   font-family: Sora, sans-serif;
-  font-family: 16px;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   color: #616161;
+  width: 80%;
 `;
 
 export const RescueBtn = styled.button`
   background-color: var(--primary--color);
   width: 15rem;
-  height: 4rem;
+  padding: 0.8rem;
   color: white;
   font-size: 18px;
+  border:none;
   font-family: Sora, sans-serif;
   font-weight: 700;
   border-radius: 16px;
-  margin-top: 3rem;
+  margin-top: 1.6rem;
   cursor: pointer;
 `;

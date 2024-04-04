@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 export const useOutsideClick = (ref: React.RefObject<HTMLElement>, callbackInside: () => void,
 callbackOutside: () => void) => {

@@ -1,30 +1,168 @@
-# React + TypeScript + Vite
+# 🚀 APP Culture Power
+ ### Bem vindo(a)!
+ ```bash
+Este APP foi desenvolvido para uma empresa que deseja gamificar os resultados e recompensar seus colaboradores de acordo com seu desempenho. Os colaboradores podem resgatar produtos da loja virtual da empresa usando as joias adquiridas durante suas atividades.
+```
+## 💻 Instalação
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Antes de começar, certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+```bash
+# Clone esse repositório
+- $ git clone https://github.com/modulo4turma2Arnia/Front-End_Module-4
 
-Currently, two official plugins are available:
+# Vá para o repositório Back-end
+- $ cd Front-End_Module-4
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Instale as dependencias
+- $ npm i axios styled-components react-icons react-roter-dom 
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Rode a aplicação
+- $ npm run dev
+```
 
-- Configure the top-level `parserOptions` property like this:
+## 👨‍💻 Dependências Utilizadas
+📚 Aqui estão as estrelas do show, as dependências que fazem tudo funcionar:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+- [react-router-dom](https://github.com/remix-run/react-router)
+- [styled-components](https://github.com/styled-components/styled-components)
+- [react-icons](https://github.com/react-icons/react-icons)
+- [axios](https://axios-http.com/ptbr/docs/intro)
+
+
+## 🛣️ Rotas do APP
+
+### 🔵 GET v1/users/infouser
+- **Descrição**: Retorna todas as informações do usuário. (Necessita autenticação).
+### 🔵 GET v1/users/:id
+- **Descrição**: Retorna o usuário com id encontrado. (Necessita autenticação).
+### 🔵 GET v1/users
+- **Descrição**: Retorna todos os usuários cadastrados no Banco de dados. (Necessita autenticação).
+### 🔵 GET v1/products
+- **Descrição**: Retorna todos os Produtos, também é possivel filtrar.(Necessita autenticação).
+- **Exemplos de Query**: /v1/products?price=2 , /v1/products?name=apple, v1/products?page=1&limit=10
+### 🔵 GET v1/products/:id
+- **Descrição**: Retorna o produto encontrado com o mesmo id. (Necessita autenticação).
+### 🔵 GET v1/jewelry
+- **Descrição**: Retorna todas as jóias cadastradas no Banco. (Necessita  autenticação).
+
+### 🟢 POST v1/auth
+- **Descrição**: Verifica o login e retornar um token.
+- **Corpo da Requisição**:
+```javascript
+{
+	email: "fulano@ciclano.com.br",
+	password: "senha1234"
+}
+```
+### 🟢 POST v1/auth/register
+- **Descrição**: Cria um usuário no bando de dados(Necessita autenticação).
+- **Aviso**: A Imagem de perfil do usuário não é obrigatória. 
+- **Observação - em caso de craição de um admin, ele deve conter a propriedade role: admin**:
+```javascript
+{
+	FirstName: "Fulano"
+	LastName: "Beltrano"
+	email: "beltrano@fulano.com.br"
+	profileImage: "URL Da imagem enviada."
+	role: "admin",
+	password: "senha123"
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Corpo da Requisição**:
+```javascript
+{
+	FirstName: "Fulano"
+	LastName: "Beltrano"
+	email: "beltrano@fulano.com.br"
+	profileImage: "URL Da imagem enviada."
+	password: "senha123"
+}
+```
+### 🟢 POST v1/users/rescue/:id
+- **Descrição**: Resgata um produto e salva no usuário(Necessita autenticação).
+- **Descrição**: O Usuário precisa estar logado.
+
+### 🟢 POST /v1/products
+- **Descrição**: Cadastra um produto no sistema.
+- **Descrição**: Todos os produtos devem ter imagens.
+- **Corpo da Requisição**:
+```javascript
+{
+	"name": "Fritadeira Air Fryer Sem Óleo Britânia",
+	"description": "Fritadeira Air Fryer Sem Óleo...",
+	"price": "15",
+  "image": "URL da imagem"
+}
+```
+
+
+### 🟢 POST /v1/jewelry/:userId/:jewelryId
+- **Descrição**: Atribui uma jóia a um usuário.
+
+### 🟢 POST v1/jewelry
+- **Descrição**: Cria uma jóia no banco de dados.
+- **Descrição**: Todas as jóias devem ter imagens.
+```javascript
+{
+	"type": "Joia do Tempo",
+	"habilities": "Nesta joia está a possibilidade de manejo da administr.....",
+	"image": "URL da imagem"
+}
+```
+
+
+### 🟡 PATH /v1/jewelry/:id
+- **Descrição**: Atualiza as propriedades da jóia encontrada.
+- **Corpo da Requisição**:
+ ```javascript
+{
+type: "Joia da Mente Modificada"
+}
+```
+
+### 🟡 PATH /v1/products/:id
+- **Descrição**: Atualiza as propriedades de um produto encontrada.
+- **Corpo da Requisição**:
+ ```javascript
+{
+	name: "JBL Tune 720BT"
+}
+```
+
+### 🟡 PATH /v1/users/chg/password
+- **Descrição**: Atualiza a senha do usuário.
+- **Corpo da Requisição**:
+ ```javascript
+{
+	currentPassword: "senha123",
+	newPassword: "senha1234"
+}
+```
+
+### 🟡 PATH /v1/users/:id
+- **Descrição**: Atualiza as propriedades de um usuário encontrado.
+- **Corpo da Requisição**:
+ ```javascript
+{
+  FirstName: "Fulano Editado"
+}
+```
+
+### 🔴 DELETE /v1/users/:id
+- **Descrição**: Remove um usuário específico do banco de dados.
+
+### 🔴 DELETE /v1/products/:id
+- **Descrição**: Remove um produto específico do banco de dados.
+
+
+### Detalhes Adicionais
+- **Autores do APP:**
+- [Esdras Marcelino da Silva](www.linkedin.com/in/esdras-marcelino-da-silva-developer-full-stack)
+- [Gabriel Anacleto]
+- [Guilherme Bernades]
+- [Lucas Carvalho]
+- [João Pires de Andrade]
+- **Contato:** esdrasmarcelino55@gmail.com
+

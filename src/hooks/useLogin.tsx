@@ -1,6 +1,6 @@
-import React from "react";
 import { LoginProps } from "../types/loginProps/Login";
 import { Login } from "../services/handles/handleLogin";
+import * as React from "react";
 
 export function useLogin() {
   const [result, setResult] = React.useState<LoginProps | null>(null)

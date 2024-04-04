@@ -9,8 +9,12 @@ export const Container = styled.div`
 
 export const ImgField = styled.div`
   border: 0.1rem solid #eeeeee;
+<<<<<<< HEAD
   display: flex;
 
+=======
+  display:flex;
+>>>>>>> 0405e7ebf1fc611c2b9f8a8d897393d0331ea592
   padding: 0.1rem;
   border-radius: 10%;
 `;

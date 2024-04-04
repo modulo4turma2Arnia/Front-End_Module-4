@@ -4,8 +4,11 @@ import { Opening } from "../pages//opening/opening";
 import { Home } from "../pages/home/home";
 import { Profile } from "../pages/profile/profile";
 import { Product } from "../pages/product/product";
+import { ProductRescuedCard } from "../components/ui/productRescuedCard/productRescuedCard";
+import { Products } from "../pages/products/Products";
 
 const router = createBrowserRouter([
+
   {
     path: "/",
     element: <Opening />,
@@ -15,7 +18,15 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/product",
+    path: "/products",
+    element: <Products />,
+  },
+  {
+      path: "/success-rescue/:id",
+      element: <ProductRescuedCard />
+  },
+  {
+    path: "/product/:id",
     element: <Product />,
   },
   {

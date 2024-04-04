@@ -4,6 +4,7 @@ import { ProductRescuedCard } from "../../components/ui/productRescuedCard/produ
 import { Header } from "../../components/ui/header/Header";
 
 export const SuccessRescue: React.FC = () => {
+
   return (
     <>
       <Header textColor="#502B6B" />
@@ -12,5 +13,5 @@ export const SuccessRescue: React.FC = () => {
         <ProductRescuedCard />
       </C.Container>
     </>
-  );
-};
+  )
+}

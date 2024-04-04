@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+import * as C from './style/style'
+>>>>>>> 0405e7ebf1fc611c2b9f8a8d897393d0331ea592
 import { CardsProps } from '../../../types/cardsProps/CardsProps'
 import * as C from './style/style'
 
