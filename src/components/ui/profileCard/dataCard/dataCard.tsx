@@ -1,6 +1,15 @@
 import { ProfileCard } from "../profileCard";
 import * as C from "./style/style";
 import avatar from "../../../../assets/images/avatar.jpg";
+<<<<<<< HEAD
+import { UserDataProps } from "../../../../types/userProps/UserProps";
+
+
+export const DataCard = (data: any) => {
+  const userInfo: UserDataProps = data.dataUser
+
+  return (
+=======
 import { DataCardProps } from "../../../../types/dataCardProps/DataCardProps";
 import { useState } from "react";
 
@@ -15,6 +24,7 @@ export const DataCard: React.FC<DataCardProps> = ({ dataUser }) => {
  
 
  return (
+>>>>>>> 0405e7ebf1fc611c2b9f8a8d897393d0331ea592
     <>
       <ProfileCard title="Meus Dados">
         <C.ImgCircle>
@@ -23,7 +33,11 @@ export const DataCard: React.FC<DataCardProps> = ({ dataUser }) => {
         <C.FormContainer>
           <C.Section>
             <C.Legend>Nome</C.Legend>
+<<<<<<< HEAD
+            <C.Field>{userInfo.FirstName}</C.Field>
+=======
             <C.Field>{userInfo.FirstName} {userInfo.LastName}</C.Field>
+>>>>>>> 0405e7ebf1fc611c2b9f8a8d897393d0331ea592
           </C.Section>
           <C.Section>
             <C.Legend>E-mail</C.Legend>

@@ -2,23 +2,13 @@ import axios from "axios";
 import { CulturePowerPath } from "../../services/url";
 import { CardProps } from "../../types/cardProps/CardProps";
 
-export const GetDataCards = async (name = '', price = '') : Promise<CardProps[]> =>{
+export const GetDataCards = async () : Promise<CardProps> =>{
     try {
         const token = localStorage.getItem('token')
         const headers = {
             Authorization: `Bearer ${token}`
         }
-
-        let queryString = ''
-        if(name){
-            queryString += `name=${encodeURIComponent(name)}`
-        } 
-        if(price) {
-            queryString += `${queryString ? '&' : ''}price=${price}`
-        }
-        
-        const url = queryString ? `products?${queryString}` : 'products'
-        const result = await CulturePowerPath.get(url, { headers })
+        const result = await CulturePowerPath.get('products', { headers })
 
         if(result.status === 200){
             return result.data
